@@ -107,4 +107,33 @@ function desenharGraficos() {
     document.getElementById("graficoColuna")
   );
   grafico.draw(tabela, opcoes);
+
+  tabela = new google.visualization.DataTable();
+
+  tabela.addColumn("string", "categoria");
+  tabela.addColumn("number", "valores");
+  tabela.addColumn({ type: "number", role: "annotation" });
+
+  tabela.addRows([
+    ["Educação", 2000, 2000],
+    ["Transporte", 500, 500],
+    ["Lazer", 230, 230],
+    ["Saúde", 50, 50],
+    ["Cartão de crédito", 900, 900],
+    ["Alimentação", 260, 260],
+  ]);
+
+  opcoes = {
+    title: "Tipos de gastos",
+    height: 400,
+    width: 800,
+    vAxis: {
+      gridlines: { count: 0 },
+    },
+  };
+
+  grafico = new google.visualization.ColumnChart(
+    document.getElementById("graficoColunaB")
+  );
+  grafico.draw(tabela, opcoes);
 }
