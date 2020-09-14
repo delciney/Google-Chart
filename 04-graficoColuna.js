@@ -90,7 +90,17 @@ function desenharGraficos() {
   ]);
 
   opcoes = {
-    title: "Entradas e saídas",
+    title: "Entradas e saídas da conta",
+    height: 400,
+    width: 800,
+    vAxis: {
+      gridlines: { color: "transparent" },
+      format: "currency",
+      title: "valores",
+    },
+    hAxis: {
+      title: "Mês",
+    },
   };
 
   grafico = new google.visualization.ColumnChart(
