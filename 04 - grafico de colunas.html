@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>04 - Gráfico de colunas</title>
+    <meta charset="utf-8" />
+    <script
+      src="https://www.gstatic.com/charts/loader.js"
+      type="text/javascript"
+    ></script>
+    <script src="./04-graficoColuna.js" type="text/javascript"></script>
+    <script>
+      google.charts.load("current", {
+        packages: ["corechart"],
+        language: "pt",
+      });
+
+      google.charts.setOnLoadCallback(desenharGraficos);
+    </script>
+  </head>
+  <body>
+    <div id="graficoPizza"></div>
+    <div id="graficoLinha"></div>
+    <div id="graficoColuna"></div>
+  </body>
+</html>
